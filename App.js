@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+import { WebView } from 'react-native-webview';
+// import { Container } from './styles';
+
+export default function components() {
+  return (  
+    /** blog.parse.com */
+    /** Here
+     *  Here Mobile
+     */
+    <WebView style={Styles.webview}
+      source={{uri:'https://github.com/facebook/react-native'}}></WebView>    
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Styles = StyleSheet.create({
+    webview:{
+        flex:1,
+        borderColor: 'blue',
+        marginTop: 20
+    }
+})
